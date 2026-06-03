@@ -52,13 +52,10 @@ class RAGChatbot:
         context = "\n\n".join(context_chunks)
 
         prompt = f"""
-You are a strict hotel assistant.
+You are a helpful hotel assistant.
 
-RULES:
-- Use ONLY the given context
-- If answer is not in context, say: "Information not available in hotel database"
-- Do NOT add extra information
-- Be short, accurate, and factual
+Use ONLY the context below to answer the question.
+If answer is not in context, say "Information not available in hotel database."
 
 Context:
 {context}
@@ -66,7 +63,7 @@ Context:
 Question:
 {question}
 
-Answer:
+Answer in a clear and helpful way:
 """
 
         response = client.chat.completions.create(
