@@ -11,3 +11,8 @@
 2. python rag_engine.py
 3. python retriever.py
 4. python chatbot.py
+
+## Imprtant 
+Create a .env file and add:
+
+GROQ_API_KEY=your_groq_api_key
